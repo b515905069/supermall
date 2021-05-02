@@ -26,12 +26,14 @@
     methods: {
       itemClick(index) {
         this.currentSize = index;
+        //navbar 按钮点击监听 传给home要显示的是哪栏数据
+        this.$emit("tabClick", index);
       }
     }
   }
 </script>
 
-<style>
+<style scoped>
   #tab_control {
     display: flex;
     text-align: center;
